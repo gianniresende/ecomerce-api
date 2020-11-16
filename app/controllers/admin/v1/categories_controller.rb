@@ -1,5 +1,6 @@
 module Admin::V1
   class CategoriesController < ApiController
+    
     def index
       @categories = Category.all
     end
@@ -7,10 +8,13 @@ module Admin::V1
     def create
       @category = Category.new
       @category.attributes = category_params
+      save_category!       
+    end
+
+    def update
+      @category = Category.find(params[:id])
+      @category.attributes = category_params
       save_category!
-    rescue
-      
-      
     end
 
     private

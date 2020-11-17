@@ -150,7 +150,6 @@ RSpec.describe "Admin::v1::categories as :admin", type: :request do
     end
     
     
-  end
-  
+  end  
 
 end

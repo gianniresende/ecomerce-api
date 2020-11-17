@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Admin::v1::categories", type: :request do
+RSpec.describe "Admin::v1::categories as :admin", type: :request do
 
   let(:user) { create(:user) }
 

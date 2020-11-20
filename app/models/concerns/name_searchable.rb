@@ -3,7 +3,7 @@ module NameSearchable
 
   included do 
     scope :search_by_name, -> (value) do 
-      self.where("name ILIKE ?", "%#{value}")
+      self.where("name ILIKE ?", "%#{value}%")
     end
   end
 end
